@@ -43,7 +43,7 @@ http.createServer((request, response) => {
             console.log("Project called");
             response.write(ProjectContent);
             break;
-        case '/register':
+        case '/registeration':
             response.writeHead(200, { "Content-Type": "text/html" });
             console.log("Register called");
             response.write(registeration);
