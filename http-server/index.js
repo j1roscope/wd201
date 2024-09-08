@@ -1,5 +1,16 @@
 const http = require("http"); // Change to 'http' instead of 'http-server'
 const fs = require("fs");
+const args = minimist(process.argv.slice(1), {
+    default:{
+        port: 300
+    },
+    alias:{
+        port:'p'
+    }
+});
+const port = args.port;
+
+
 
 console.log("starting server");
 let HomeContent = '';
@@ -50,6 +61,6 @@ http.createServer((request, response) => {
             break;
     }
     response.end();
-}).listen(3000, () => {
-    console.log("Server running at http://localhost:3000");
+}).listen(port, () => {
+    console.log("Server running at http://localhost:"+port);
 });
