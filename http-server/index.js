@@ -7,7 +7,7 @@ let ProjectContent = '';
 let registeration = '';
 
 // Reading the HTML files asynchronously
-fs.readFile("./index.html", (err, home) => {
+fs.readFile("./home.html", (err, home) => {
     if (err) {
         throw err;
     }
