@@ -4,7 +4,7 @@ const fs = require("fs");
 
 const args = require("minimist")(process.argv.slice(1), {
     default:{
-        port: 300
+        port: 3000
     },
     alias:{
         port:'p'
