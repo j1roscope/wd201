@@ -1,6 +1,8 @@
 const http = require("http"); // Change to 'http' instead of 'http-server'
 const fs = require("fs");
-const args = minimist(process.argv.slice(1), {
+
+
+const args = require("minimist")(process.argv.slice(1), {
     default:{
         port: 300
     },
